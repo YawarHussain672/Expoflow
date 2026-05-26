@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ExpoFlow - Smart Trade Show Management System</title>
+    <meta name="description" content="Simplify trade shows with QR ticketing, exhibitor management, food ordering, and B2B networking. All in one seamless platform.">
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Serif:wght@600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <a href="#" class="logo">
+                <div class="logo-icon">E</div>
+                ExpoFlow
+            </a>
+            <button class="menu-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-navigation" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-links" id="primary-navigation">
+                <li><a href="#features">Features</a></li>
+                <li><a href="#showcase">Product</a></li>
+                <li><a href="#how-it-works">How It Works</a></li>
+                <li><a href="pricing.php" data-static-fallback="#cta">Pricing</a></li>
+                <li><a href="start-free-trial.php" class="btn-primary" data-static-fallback="#cta">Get Started Free</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1>A Smarter Way to Run <span>Trade Shows</span></h1>
+                <p>ExpoFlow simplifies trade show management with QR ticketing, exhibitor coordination, food delivery, and B2B networking - all in one seamless, stress-free platform.</p>
+                <div class="hero-buttons">
+                    <a href="start-free-trial.php" class="btn-primary" data-static-fallback="#cta">Start Free Trial</a>
+                    <a href="book-demo.php" class="btn-secondary" data-static-fallback="#cta">Book a Demo</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <img class="hero-photo" src="https://images.unsplash.com/photo-1775314054195-85f31de0c944?auto=format&amp;fit=crop&amp;w=1200&amp;q=80" alt="Busy exhibition hall with booths and attendees">
+                <div class="dashboard-preview">
+                    <div class="dashboard-mockup">
+                        <div class="mockup-header">
+                            <span class="mockup-title">Live Dashboard</span>
+                            <span class="live-status"><span></span> Live</span>
+                        </div>
+                        <div class="mockup-stats">
+                            <div class="mockup-stat">
+                                <div class="mockup-stat-value">1,247</div>
+                                <div class="mockup-stat-label">Live Attendees</div>
+                            </div>
+                            <div class="mockup-stat">
+                                <div class="mockup-stat-value">156/180</div>
+                                <div class="mockup-stat-label">Active Booths</div>
+                            </div>
+                        </div>
+                        <div class="mockup-chart">
+                            <div class="chart-bar" style="--bar-height: 60%; height: 60%;"></div>
+                            <div class="chart-bar" style="--bar-height: 80%; height: 80%;"></div>
+                            <div class="chart-bar" style="--bar-height: 45%; height: 45%;"></div>
+                            <div class="chart-bar" style="--bar-height: 90%; height: 90%;"></div>
+                            <div class="chart-bar" style="--bar-height: 70%; height: 70%;"></div>
+                            <div class="chart-bar" style="--bar-height: 55%; height: 55%;"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Bar -->
+    <section class="stats-bar">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3 class="stat-number" data-count="10000" data-format="compact" data-suffix="+">0</h3>
+                <p>Attendees Managed</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="stat-number" data-count="500" data-suffix="+">0</h3>
+                <p>Events Powered</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="stat-number" data-count="98" data-suffix="%">0</h3>
+                <p>Satisfaction Rate</p>
+            </div>
+            <div class="stat-item">
+                <h3 class="stat-number" data-count="24" data-suffix="/7">0</h3>
+                <p>Support Available</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Clients Section -->
+    <section class="clients">
+        <div class="clients-header">Trusted by Leading Organizations</div>
+        <div class="clients-marquee" aria-label="Organizations using ExpoFlow">
+            <div class="clients-track">
+                <div class="client-logo">TechCorp</div>
+                <div class="client-logo">InnovateX</div>
+                <div class="client-logo">CloudSync</div>
+                <div class="client-logo">DataViz</div>
+                <div class="client-logo">AI Labs</div>
+                <div class="client-logo">SecureNet</div>
+                <div class="client-logo" aria-hidden="true">TechCorp</div>
+                <div class="client-logo" aria-hidden="true">InnovateX</div>
+                <div class="client-logo" aria-hidden="true">CloudSync</div>
+                <div class="client-logo" aria-hidden="true">DataViz</div>
+                <div class="client-logo" aria-hidden="true">AI Labs</div>
+                <div class="client-logo" aria-hidden="true">SecureNet</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <h2>Everything You Need in One Platform</h2>
+            <p>Stop juggling multiple systems. ExpoFlow brings all your trade show operations together seamlessly.</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://images.unsplash.com/photo-1595079834934-b78552e04b10?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Attendee scanning a QR code at event entry">
+                    <span>QR Ticketing</span>
+                </div>
+                <div class="feature-content">
+                    <h3>QR Code Ticketing</h3>
+                    <p>Instant check-ins with QR scanning. Track attendance in real-time, manage access levels, and eliminate paper tickets completely.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://images.unsplash.com/photo-1761195696518-6384573549ea?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Trade show booth prepared for exhibitors">
+                    <span>Exhibitors</span>
+                </div>
+                <div class="feature-content">
+                    <h3>Exhibitor Management</h3>
+                    <p>Handle booth assignments, payments, electricity requests, and vendor coordination from a single dashboard.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://images.unsplash.com/photo-1533777857889-4be7c70b33f7?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Catered food service for event attendees">
+                    <span>Food Orders</span>
+                </div>
+                <div class="feature-content">
+                    <h3>Direct Food Ordering</h3>
+                    <p>Attendees order from their phones, food arrives at their booth or seat. No queues, no chaos - just convenience.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://images.unsplash.com/photo-1515169067868-5387ec356754?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Professionals networking at a business event">
+                    <span>Networking</span>
+                </div>
+                <div class="feature-content">
+                    <h3>B2B Networking</h3>
+                    <p>AI-powered matchmaking connects the right people. Schedule meetings, book rooms, and track connections effortlessly.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Event operations team coordinating service requests">
+                    <span>Service Desk</span>
+                </div>
+                <div class="feature-content">
+                    <h3>Service Requests</h3>
+                    <p>Track and resolve electricity, internet, furniture, and AV requests in real-time. No more lost emails or missed requests.</p>
+                </div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-image">
+                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Analytics dashboard used to monitor event performance">
+                    <span>Analytics</span>
+                </div>
+                <div class="feature-content">
+                    <h3>Live Analytics</h3>
+                    <p>Monitor attendance, engagement, revenue, and booth performance with real-time dashboards and detailed reports.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Showcase -->
+    <section class="product-showcase" id="showcase">
+        <div class="section-header">
+            <h2>See ExpoFlow in Action</h2>
+            <p>Every feature designed to make your trade shows smoother and more successful.</p>
+        </div>
+
+        <div class="showcase-grid">
+            <div class="showcase-image">
+                <img class="showcase-photo" src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Conference attendees moving through a busy event floor">
+                <div class="showcase-screen">
+                    <div class="screen-header">
+                        <div class="screen-dot"></div>
+                        <div class="screen-dot"></div>
+                        <div class="screen-dot"></div>
+                    </div>
+                    <div class="screen-content">
+                        <div class="screen-item">
+                            <div class="screen-icon">OK</div>
+                            <div style="flex: 1;">
+                                <div style="font-weight: 600; font-size: 14px;">Check-in Complete</div>
+                                <div style="font-size: 12px; color: #64748B;">Booth A-12 - 2 mins ago</div>
+                            </div>
+                        </div>
+                        <div class="screen-item">
+                            <div class="screen-icon">Rs</div>
+                            <div style="flex: 1;">
+                                <div style="font-weight: 600; font-size: 14px;">Payment Received</div>
+                                <div style="font-size: 12px; color: #64748B;">Rs. 45,000 - Booth C-15</div>
+                            </div>
+                        </div>
+                        <div class="screen-item">
+                            <div class="screen-icon">SR</div>
+                            <div style="flex: 1;">
+                                <div style="font-weight: 600; font-size: 14px;">Service Request</div>
+                                <div style="font-size: 12px; color: #64748B;">Power - Booth B-08</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="showcase-text">
+                <h3>Real-Time Command Center</h3>
+                <p>Monitor everything happening at your trade show from one beautiful dashboard. See check-ins, payments, and service requests as they happen.</p>
+                <ul>
+                    <li>Live attendee tracking</li>
+                    <li>Instant notifications for critical events</li>
+                    <li>Quick action buttons for rapid response</li>
+                    <li>Custom views for different team roles</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="showcase-grid">
+            <div class="showcase-text">
+                <h3>Interactive Floor Maps</h3>
+                <p>Visualize your entire exhibition hall at a glance. Color-coded booth status, real-time occupancy, and one-click access to exhibitor details.</p>
+                <ul>
+                    <li>Drag-and-drop booth assignment</li>
+                    <li>Heat maps showing visitor traffic</li>
+                    <li>Filter by category or status</li>
+                    <li>Export layouts for print materials</li>
+                </ul>
+            </div>
+            <div class="showcase-image">
+                <img class="showcase-photo" src="https://images.unsplash.com/photo-1761195696518-6384573549ea?auto=format&amp;fit=crop&amp;w=1000&amp;q=80" alt="Exhibition booth layout for a trade show floor">
+                <div class="showcase-screen">
+                    <div class="screen-header">
+                        <div class="screen-dot"></div>
+                        <div class="screen-dot"></div>
+                        <div class="screen-dot"></div>
+                    </div>
+                    <div style="display: grid; grid-template-columns: repeat(12, 1fr); gap: 4px; padding: 20px;">
+                        <div style="aspect-ratio: 1; background: #10B981; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #10B981; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #F59E0B; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #10B981; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #10B981; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #CBD5E1; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #10B981; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #10B981; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #10B981; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #F59E0B; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #10B981; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #10B981; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #10B981; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #CBD5E1; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #10B981; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #10B981; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #10B981; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #10B981; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #F59E0B; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #10B981; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #10B981; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #CBD5E1; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #10B981; border-radius: 2px;"></div>
+                        <div style="aspect-ratio: 1; background: #10B981; border-radius: 2px;"></div>
+                    </div>
+                    <div style="padding: 0 20px 20px; display: flex; gap: 16px; font-size: 11px; color: #64748B;">
+                        <span><i class="legend-dot active"></i>Active</span>
+                        <span><i class="legend-dot setup"></i>Setup</span>
+                        <span><i class="legend-dot empty"></i>Empty</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="how-it-works" id="how-it-works">
+        <div class="section-header">
+            <h2>Launch Your Event in 3 Simple Steps</h2>
+            <p>Set up a professional trade show in minutes, not weeks.</p>
+        </div>
+        <div class="steps-container">
+            <div class="step-card">
+                <div class="step-image">
+                    <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Organizer setting up an event plan on a laptop">
+                    <div class="step-number">1</div>
+                </div>
+                <h3>Set Up Your Event</h3>
+                <p>Configure booths, categories, pricing, and access levels. Our intuitive interface makes setup effortless - no technical skills required.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-image">
+                    <img src="https://images.unsplash.com/photo-1560439514-4e9645039924?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Event team inviting exhibitors and attendees">
+                    <div class="step-number">2</div>
+                </div>
+                <h3>Invite Exhibitors & Attendees</h3>
+                <p>Send invitations, collect registrations, and process payments. Exhibitors and attendees manage their profiles through personalized portals.</p>
+            </div>
+            <div class="step-card">
+                <div class="step-image">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&amp;fit=crop&amp;w=900&amp;q=80" alt="Live event floor being monitored during a conference">
+                    <div class="step-number">3</div>
+                </div>
+                <h3>Run & Monitor Live</h3>
+                <p>Watch everything unfold from your command center. Real-time updates, instant alerts, and live analytics keep you in complete control.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta" id="cta">
+        <div class="cta-content">
+            <h2>Ready to Transform Your Trade Shows?</h2>
+            <p>Join hundreds of event organizers who've made the switch to stress-free trade show management.</p>
+            <div class="cta-actions">
+                <a href="start-free-trial.php" class="btn-white" data-static-fallback="#cta">Start Your Free Trial</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-about">
+                <h3>ExpoFlow</h3>
+                <p>The all-in-one platform for modern trade show management. Simplify operations, delight attendees, and grow your events effortlessly.</p>
+                <div class="footer-social">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#" class="social-link linkedin" aria-label="ExpoFlow on LinkedIn">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" role="img">
+                                    <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04s-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.47-.9 1.64-1.85 3.37-1.85 3.61 0 4.27 2.38 4.27 5.47v6.27zM5.35 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.13 20.45H3.57V9h3.56v11.45z"></path>
+                                </svg>
+                            </span>
+                            <small>LinkedIn</small>
+                        </a>
+                        <a href="#" class="social-link instagram" aria-label="ExpoFlow on Instagram">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" role="img">
+                                    <path d="M7.75 2h8.5A5.76 5.76 0 0 1 22 7.75v8.5A5.76 5.76 0 0 1 16.25 22h-8.5A5.76 5.76 0 0 1 2 16.25v-8.5A5.76 5.76 0 0 1 7.75 2zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5zM12 7.25A4.75 4.75 0 1 1 12 16.75 4.75 4.75 0 0 1 12 7.25zm0 2A2.75 2.75 0 1 0 12 14.75 2.75 2.75 0 0 0 12 9.25zm5.05-2.13a1.12 1.12 0 1 1 0 2.25 1.12 1.12 0 0 1 0-2.25z"></path>
+                                </svg>
+                            </span>
+                            <small>Instagram</small>
+                        </a>
+                        <a href="#" class="social-link facebook" aria-label="ExpoFlow on Facebook">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" role="img">
+                                    <path d="M14.2 8.3V6.9c0-.68.46-.84.78-.84h2V2.14L14.22 2C10.68 2 9.88 4.66 9.88 6.36V8.3H7v4h2.88V22h4.32v-9.7h2.9l.45-4h-3.35z"></path>
+                                </svg>
+                            </span>
+                            <small>Facebook</small>
+                        </a>
+                        <a href="#" class="social-link x-twitter" aria-label="ExpoFlow on X">
+                            <span class="social-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" role="img">
+                                    <path d="M17.53 3h3.14l-6.86 7.84L21.88 21h-6.32l-4.95-6.47L4.94 21H1.8l7.34-8.39L1.4 3h6.48l4.47 5.91L17.53 3zm-1.1 16.21h1.74L6.93 4.7H5.06l11.37 14.51z"></path>
+                                </svg>
+                            </span>
+                            <small>X</small>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Product</h4>
+                <ul>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="#showcase">Product</a></li>
+                    <li><a href="book-demo.php" data-static-fallback="#cta">Demo</a></li>
+                    <li><a href="updates.php" data-static-fallback="#features">Updates</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Solutions</h4>
+                <ul>
+                    <li><a href="solutions.php?type=corporate-shows" data-static-fallback="#features">Corporate Shows</a></li>
+                    <li><a href="solutions.php?type=tech-conferences" data-static-fallback="#features">Tech Conferences</a></li>
+                    <li><a href="solutions.php?type=trade-fairs" data-static-fallback="#features">Trade Fairs</a></li>
+                    <li><a href="solutions.php?type=startup-events" data-static-fallback="#features">Startup Events</a></li>
+                </ul>
+            </div>
+            <div class="footer-links">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="blog.php" data-static-fallback="#features">Blog</a></li>
+                    <li><a href="help-center.php" data-static-fallback="#cta">Help Center</a></li>
+                    <li><a href="contact.php" data-static-fallback="#cta">Contact Us</a></li>
+                    <li><a href="privacy-policy.php" data-static-fallback="#cta">Privacy Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 ExpoFlow. All rights reserved. | Made with care for event organizers worldwide.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
