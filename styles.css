@@ -1000,10 +1000,11 @@ body.modal-open {
     inset: 0;
     z-index: 1000;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     justify-content: center;
     padding: 24px;
     background: rgba(15, 23, 42, 0.48);
+    overflow-y: auto;
 }
 
 .modal-overlay[hidden] {
@@ -1012,13 +1013,12 @@ body.modal-open {
 
 .modal-dialog {
     width: min(100%, 560px);
-    max-height: calc(100vh - 48px);
-    overflow-y: auto;
     background: white;
     border-radius: 8px;
     box-shadow: 0 24px 70px rgba(15, 23, 42, 0.3);
     padding: 48px 32px 32px;
     position: relative;
+    margin: auto 0;
 }
 
 .modal-close {
@@ -1381,17 +1381,47 @@ body.modal-open {
     }
 
     .modal-overlay {
-        padding: 14px;
+        padding: 12px;
     }
 
     .modal-dialog {
-        padding: 54px 24px 24px;
-        max-height: calc(100vh - 28px);
+        padding: 58px 16px 16px;
+        margin: auto 0;
+        width: 100%;
+    }
+
+    .modal-close {
+        top: 8px;
+        right: 8px;
     }
 
     .form-grid {
         grid-template-columns: 1fr;
-        gap: 16px;
+        gap: 10px;
+    }
+
+    .contact-form input:not([type="checkbox"]),
+    .contact-form textarea {
+        padding: 9px 12px;
+        font-size: 14px;
+    }
+
+    .contact-form input:not([type="checkbox"]) {
+        min-height: 38px;
+    }
+
+    .contact-form textarea {
+        min-height: 80px;
+    }
+
+    .privacy-check {
+        font-size: 13px;
+    }
+
+    .form-submit {
+        min-height: 40px;
+        font-size: 14px;
+        padding: 0 14px 0 18px;
     }
 }
 
