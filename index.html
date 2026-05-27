@@ -26,7 +26,7 @@
                 <li><a href="#showcase">Product</a></li>
                 <li><a href="#how-it-works">How It Works</a></li>
                 <li><a href="pricing.php" data-static-fallback="#cta">Pricing</a></li>
-                <li><a href="start-free-trial.php" class="btn-primary" data-static-fallback="#cta">Get Started Free</a></li>
+                <li><a href="#contact-modal" class="btn-primary" data-modal-target="contact-modal">Get Started Free</a></li>
             </ul>
         </nav>
     </header>
@@ -38,7 +38,7 @@
                 <h1>A Smarter Way to Run <span>Trade Shows</span></h1>
                 <p>ExpoFlow simplifies trade show management with QR ticketing, exhibitor coordination, food delivery, and B2B networking - all in one seamless, stress-free platform.</p>
                 <div class="hero-buttons">
-                    <a href="start-free-trial.php" class="btn-primary" data-static-fallback="#cta">Start Free Trial</a>
+                    <a href="#contact-modal" class="btn-primary" data-modal-target="contact-modal">Start Free Trial</a>
                     <a href="book-demo.php" class="btn-secondary" data-static-fallback="#cta">Book a Demo</a>
                 </div>
             </div>
@@ -335,7 +335,7 @@
             <h2>Ready to Transform Your Trade Shows?</h2>
             <p>Join hundreds of event organizers who've made the switch to stress-free trade show management.</p>
             <div class="cta-actions">
-                <a href="start-free-trial.php" class="btn-white" data-static-fallback="#cta">Start Your Free Trial</a>
+                <a href="#contact-modal" class="btn-white" data-modal-target="contact-modal">Start Your Free Trial</a>
             </div>
         </div>
     </section>
@@ -416,6 +416,67 @@
             <p>&copy; 2026 ExpoFlow. All rights reserved. | Made with care for event organizers worldwide.</p>
         </div>
     </footer>
+
+    <div class="modal-overlay" id="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contact-modal-title" hidden>
+        <div class="modal-dialog">
+            <button class="modal-close" type="button" aria-label="Close contact form">
+                <span></span>
+                <span></span>
+            </button>
+            <form class="contact-form" action="start-free-trial.php" method="post">
+                <h2 class="sr-only" id="contact-modal-title">Start your free trial</h2>
+                <div class="form-grid">
+                    <label>
+                        <span class="sr-only">First Name</span>
+                        <input type="text" name="first_name" placeholder="First Name*" autocomplete="given-name" required>
+                    </label>
+                    <label>
+                        <span class="sr-only">Last Name</span>
+                        <input type="text" name="last_name" placeholder="Last Name" autocomplete="family-name">
+                    </label>
+                    <label>
+                        <span class="sr-only">Email</span>
+                        <input type="email" name="email" placeholder="Email*" autocomplete="email" required>
+                    </label>
+                    <label>
+                        <span class="sr-only">Phone</span>
+                        <input type="tel" name="phone" placeholder="Phone*" autocomplete="tel" required>
+                    </label>
+                    <label>
+                        <span class="sr-only">Organisation Name</span>
+                        <input type="text" name="organisation_name" placeholder="Organisation Name*" autocomplete="organization" required>
+                    </label>
+                    <label>
+                        <span class="sr-only">Program Name</span>
+                        <input type="text" name="program_name" placeholder="Program Name*" required>
+                    </label>
+                    <label class="form-wide">
+                        <span class="sr-only">Program Website</span>
+                        <input type="url" name="program_website" placeholder="Program Website" autocomplete="url">
+                    </label>
+                    <label class="form-wide">
+                        <span class="sr-only">How Can we Help?</span>
+                        <textarea name="message" placeholder="How Can we Help?"></textarea>
+                    </label>
+                    <label class="privacy-check form-wide">
+                        <input type="checkbox" name="privacy_policy" value="agreed" required>
+                        <span>I agree to the <a href="privacy-policy.php" data-static-fallback="#cta">privacy policy.</a> <em>(Required)</em></span>
+                    </label>
+                    <div class="form-actions form-wide">
+                        <button class="form-submit" type="submit">
+                            Submit
+                            <span aria-hidden="true">
+                                <svg viewBox="0 0 20 20">
+                                    <path d="M10 3a7 7 0 1 1 0 14 7 7 0 0 1 0-14zm.7 3.65-1.05 1.06 1.58 1.59H5.8v1.5h5.43l-1.58 1.59 1.05 1.06L14.1 10l-3.4-3.35z"></path>
+                                </svg>
+                            </span>
+                        </button>
+                    </div>
+                    <p class="form-status form-wide" role="status" aria-live="polite"></p>
+                </div>
+            </form>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>

@@ -113,9 +113,85 @@ if (isFilePreview) {
     });
 }
 
+// Contact form modal
+const contactModal = document.getElementById('contact-modal');
+const modalTriggers = document.querySelectorAll('[data-modal-target="contact-modal"]');
+const modalClose = contactModal?.querySelector('.modal-close');
+const contactForm = contactModal?.querySelector('.contact-form');
+const formStatus = contactModal?.querySelector('.form-status');
+let lastFocusedElement = null;
+
+const openContactModal = () => {
+    if (!contactModal) {
+        return;
+    }
+
+    lastFocusedElement = document.activeElement;
+    contactModal.hidden = false;
+    document.body.classList.add('modal-open');
+
+    if (document.body.classList.contains('nav-open')) {
+        document.body.classList.remove('nav-open');
+        menuToggle?.setAttribute('aria-expanded', 'false');
+    }
+
+    const firstInput = contactModal.querySelector('.contact-form input, .contact-form textarea, .contact-form button');
+    firstInput?.focus();
+};
+
+const closeContactModal = () => {
+    if (!contactModal || contactModal.hidden) {
+        return;
+    }
+
+    contactModal.hidden = true;
+    document.body.classList.remove('modal-open');
+    if (formStatus) {
+        formStatus.textContent = '';
+    }
+    lastFocusedElement?.focus();
+};
+
+modalTriggers.forEach((trigger) => {
+    trigger.addEventListener('click', (e) => {
+        e.preventDefault();
+        openContactModal();
+    });
+});
+
+modalClose?.addEventListener('click', closeContactModal);
+
+contactModal?.addEventListener('click', (e) => {
+    if (e.target === contactModal) {
+        closeContactModal();
+    }
+});
+
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        closeContactModal();
+    }
+});
+
+if (window.location.hash === '#contact-modal') {
+    openContactModal();
+}
+
+contactForm?.addEventListener('submit', (e) => {
+    if (isFilePreview) {
+        e.preventDefault();
+        contactForm.reset();
+        formStatus.textContent = 'Thanks. This form is ready to post to start-free-trial.php when the PHP backend is connected.';
+    }
+});
+
 // Smooth scrolling
 document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
     anchor.addEventListener('click', function (e) {
+        if (this.dataset.modalTarget) {
+            return;
+        }
+
         const href = this.getAttribute('href');
 
         if (!href || href === '#') {
