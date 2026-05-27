@@ -181,8 +181,83 @@ contactForm?.addEventListener('submit', (e) => {
     if (isFilePreview) {
         e.preventDefault();
         contactForm.reset();
-        formStatus.textContent = 'Thanks. This form is ready to post to start-free-trial.php when the PHP backend is connected.';
+        formStatus.textContent = 'Thanks. This form is ready to post to save-form.php when the PHP backend is connected.';
+        formStatus.style.color = 'var(--secondary)';
+        return;
     }
+
+    // Modern AJAX Form Submission
+    e.preventDefault();
+    
+    const submitBtn = contactForm.querySelector('.form-submit');
+    const originalBtnHTML = submitBtn.innerHTML;
+    
+    // Set loading state
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = 'Submitting... <span aria-hidden="true"><span class="spinner"></span></span>';
+    
+    // Inject spinner styling inline to avoid CSS clutter
+    if (!document.getElementById('spinner-style')) {
+        const style = document.createElement('style');
+        style.id = 'spinner-style';
+        style.innerHTML = `
+            .spinner {
+                display: inline-block;
+                width: 12px;
+                height: 12px;
+                border: 2px solid rgba(255, 255, 255, 0.3);
+                border-radius: 50%;
+                border-top-color: #111;
+                animation: spin 0.8s linear infinite;
+            }
+            @keyframes spin {
+                to { transform: rotate(360deg); }
+            }
+        `;
+        document.head.appendChild(style);
+    }
+    
+    formStatus.textContent = '';
+    
+    const formData = new FormData(contactForm);
+    
+    fetch('save-form.php', {
+        method: 'POST',
+        headers: {
+            'X-Requested-With': 'XMLHttpRequest'
+        },
+        body: formData
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+        if (data.success) {
+            formStatus.textContent = data.message;
+            formStatus.style.color = '#10b981'; // beautiful green
+            contactForm.reset();
+            
+            // Auto close modal after a short delay
+            setTimeout(() => {
+                closeContactModal();
+            }, 3000);
+        } else {
+            formStatus.textContent = data.message;
+            formStatus.style.color = '#ef4444'; // error red
+        }
+    })
+    .catch(error => {
+        console.error('Error submitting form:', error);
+        formStatus.textContent = 'Something went wrong. Please try again.';
+        formStatus.style.color = '#ef4444';
+    })
+    .finally(() => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = originalBtnHTML;
+    });
 });
 
 // Smooth scrolling
