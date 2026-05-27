@@ -1099,16 +1099,16 @@ body.modal-open {
 
 .privacy-check {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 9px;
     color: #111827;
     font-size: 14px;
+    line-height: 1;
 }
 
 .privacy-check input {
-    width: 18px;
-    height: 18px;
-    margin-top: 1px;
+    width: 16px;
+    height: 16px;
     flex: 0 0 auto;
     accent-color: var(--primary);
 }
